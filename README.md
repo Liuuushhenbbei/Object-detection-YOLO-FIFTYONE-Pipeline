@@ -1,0 +1,5 @@
+Project Overview: An end-to-end object detection data lifecycle pipeline integrating YOLOv8, FiftyOne, and CVAT to support efficient pre-annotation, evaluation, and iterative dataset refinement for robot vision systems.
+
+Motivations: In real-world robot vision applications, model performance is heavily dependent on data quality and annotation consistency. Manually labeling large-scale datasets is time-consuming and error-prone. This project was designed to streamline the annotation workflow by introducing a semi-automated detection loop that: -Reduces manual labeling effort -Filters noisy predictions -Enables rapid error analysis -Supports closed-loop dataset improvement The goal is to build a reproducible and scalable annotation-feedback system to continuously improve detection performance.
+
+Pipeline Architecture Raw Images ↓ YOLOv8 Inference ↓ Confidence & IoU Filtering ↓ Upload to CVAT (Pre-annotation) ↓ Manual Refinement ↓ Download Updated Annotations ↓ Evaluation & Error Analysis (mAP / FN / FP) ↓ Iterative Dataset Improvement
